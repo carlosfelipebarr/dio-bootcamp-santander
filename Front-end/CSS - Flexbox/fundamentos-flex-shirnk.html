@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shirnk</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            border: 2px solid black;
+            max-width: 350 px;
+        }
+
+        .item {
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .shrink-1 {
+            flex-shrink: 1;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+
+        .shrink-0 {
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .shrink-2 {
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .shrink-3 {
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>flex-shrink: 1</p>
+    <div class="flex-container">
+        <div class="item shrink-1 fg-1">A</div>
+        <div class="item shrink-1 fg-1">B</div>
+        <div class="item shrink-1 fg-1">C</div>
+        <div class="item shrink-1 fg-1">D</div>
+        <div class="item shrink-1 fg-1">E</div>
+    </div>
+    <div class="flex-container">
+        <div class="item shrink-1 fg-1">A</div>
+        <div class="item shrink-1 fg-1">The genereted Lorem Ipsum</div>
+        <div class="item shrink-1 fg-1">C</div>
+        <div class="item shrink-1 fg-1">D</div>
+        <div class="item shrink-1 fg-1">E</div>
+    </div>
+    <p>flex-shrink: 0 ? basis em 100px</p>
+    <div class="flex-container">
+        <div class="item shrink-0 fg-1">A</div>
+        <div class="item shrink-0 fg-1">The genereted</div>
+        <div class="item shrink-0 fg-1">C  genereted</div>
+        <div class="item shrink-0 fg-1">D genereted</div>
+        <div class="item shrink-0 fg-1">E</div>
+    </div>
+    <p>flex-shrink em tamanhos variados</p>
+    <div class="flex-container">
+        <div class="item shrink-2 fg-1">A</div>
+        <div class="item shrink-2 fg-1">The genereted Lorem Ipsum</div>
+        <div class="item shrink-2 fg-1">C</div>
+        <div class="item shrink-1 fg-1">D</div>
+        <div class="item shrink-3 fg-1">E</div>
+    </div>
+</body>
+</html>

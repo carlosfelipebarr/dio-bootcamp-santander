@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align items</title>
+
+    <style>
+        .flex-container {
+            max-width: 400px;
+            border: 2px solid black;
+            display: flex;
+        }
+
+        .item {
+            background-color: blueviolet;
+            margin: 5px;
+            text-align: center;
+            color: white;
+            flex: 1;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .stretch {
+            align-items: stretch;
+        }
+
+        .start {
+            align-items: flex-start;
+        }
+
+        .end {
+            align-items: flex-end;
+        }
+
+        .baseline {
+            align-items: baseline;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .central {
+            height: 300px;
+            justify-content: center;
+        }
+
+        .central .item {
+            flex: 0;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>ROW</h2>
+
+    <p>center</p>
+    <section class="flex-container center">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+    
+    <p>stretch</p>
+    <section class="flex-container stretch">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+
+    <p>flex-start</p>
+    <section class="flex-container start">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+
+    <p>flex-end</p>
+    <section class="flex-container end">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+
+    <p>baseline</p>
+    <section class="flex-container baseline">
+        <div class="item"><br>Item 1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+
+    <br><hr>
+
+    <h2>Column</h2>
+
+    <p>center</p>
+    <section class="flex-container center column">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+    
+    <p>stretch</p>
+    <section class="flex-container stretch column">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+
+    <p>flex-start</p>
+    <section class="flex-container start column">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+
+    <p>flex-end</p>
+    <section class="flex-container end column">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+
+    <p>baseline</p>
+    <section class="flex-container baseline column">
+        <div class="item"><br>Item 1</div>
+        <div class="item">Lorem ipsum dolor sit, amet</div>
+        <div class="item">Item 3, mais algum texto. Lorenpisum</div>
+    </section>
+
+    <p>alinhamento central à tela</p>
+    <section class="flex-container center central">
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nulla unde quas</div>
+    </section>
+</body>
+</html>
